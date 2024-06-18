@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mijn pagina</title>
+        <meta charset="utf-8">
+        <meta name="actor" content="Dennis van Rooij">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js">
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#knop").click(function(){
+                    var voetbalteam = $("#voetbalteamID").val();
+                    var voetballer = $("#voetballerID").val();
+                    var kampioen = $("#kampioenID").val();
+
+                    window.alert("Mijn voetbalteam is " + voetbalteam + " ,mijn voetballer is "+ voetballer + " en mijn EK winnaar is " + kampioen+".");
+
+                });
+            });
+
+          function OpenLink(){
+            const url = "https://ekvoetbal.nl/landen/";
+            window.open(url);
+            target="_blank";
+            
+            
+          }
+
+        </script>
+    </head>
+    <body>
+    
+            <header>
+
+                <div>
+                    <img src="https://th.bing.com/th/id/OIP.bn1hMVFtDlRvaAHcZ8q9pQHaEo?w=269&h=180&c=7&r=0&o=5&pid=1.7" alt="oranje leeuw" width="300px">
+                </div>
+
+            </header>
+                   
+        
+        <form>
+            <p>Wat is je favoriete voetbal team?</p>
+            <input type="text" id="voetbalteamID">
+            <p>Wat is je favoriete voetballer? </p>
+            <input type="text" id="voetballerID">
+            <p>Wie wordt er europees kampioen?</p>
+            <input type="text" id="kampioenID">
+
+            <br><br>
+            <input type="button" id="knop" value=" Verstuur je antwoord">
+
+
+            <br><br>
+            <p>Wil je meer informatie over de EK deelnemers? klik dan op de link</p>
+            <button onclick="OpenLink()">
+                Open de link
+
+            </button>
+        </form>
+
+        <footer>
+            &copy;
+    
+        </footer>
+    </body>
+</html>
